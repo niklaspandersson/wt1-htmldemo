@@ -1,0 +1,11 @@
+#splash {
+  background-image: url(bilder/winter.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left -80px;
+  padding: 70px;
+  padding-bottom: 150px;
+  padding-bottom: 150px;
+  color: white;
+  font-size: 150%;
+}
