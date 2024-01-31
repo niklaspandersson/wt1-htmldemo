@@ -1,0 +1,28 @@
+#all-birds ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+#all-birds li {
+  background-color: rgb(255, 255, 255, 0.4);
+  padding: 5px;
+  margin-bottom: 20px;
+  padding-left: 180px;
+
+  background-repeat: no-repeat;
+  background-size: 150px;
+  background-position: 10px 10px;
+}
+
+#all-birds li:last-child {
+  margin-bottom: 0;
+}
+
+#robin {
+  background-image: url(bilder/robin.png);
+}
+
+#common-tit {
+  background-image: url(bilder/commontit.png);
+}
