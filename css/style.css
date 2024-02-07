@@ -1,0 +1,109 @@
+@import url("index.css");
+
+html {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  background-color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+main {
+  background-color: rgb(204, 247, 204);
+}
+
+/* --- Site header --- */
+#site-header {
+  background-color: white;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  padding: 20px;
+}
+
+#site-header h1 {
+  margin: 0;
+}
+
+#site-header nav {
+  justify-self: right;
+}
+
+#global-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#global-nav li {
+  display: inline;
+  padding: 0 10px;
+}
+
+/* --- Main content --- */
+main {
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* --- Lists of visitors --- */
+.visitors {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.visitors li {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "head head"
+    "image desc";
+
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(176, 230, 175, 0.659);
+}
+
+.visitors li h3 {
+  grid-area: head;
+  margin: 0;
+}
+
+.visitors li img {
+  grid-area: image;
+}
+
+.visitors li .description {
+  grid-area: desc;
+}
+
+.visitors li .description p:first-child {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 900px) {
+  #site-header {
+    font-size: 80%;
+  }
+
+  #global-nav li {
+    padding: 0 4px;
+  }
+}
