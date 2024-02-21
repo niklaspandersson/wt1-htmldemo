@@ -7,8 +7,8 @@ html {
 }
 
 body {
-  background-color: white;
-  max-width: 1200px;
+  background-color: #f8f8f8;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -22,12 +22,12 @@ h6 {
 }
 
 main {
-  background-color: rgb(204, 247, 204);
+  background-color: white;
 }
 
 /* --- Site header --- */
 #site-header {
-  background-color: white;
+  background-color: rgb(227, 249, 227);
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr;
@@ -66,6 +66,7 @@ img {
 .visitors {
   list-style-type: none;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 .visitors li {
@@ -78,7 +79,8 @@ img {
 
   margin-top: 20px;
   padding: 20px;
-  background-color: rgba(176, 230, 175, 0.659);
+  background-color: rgb(251, 246, 226);
+  border: 1px solid rgb(241, 222, 144);
 }
 
 .visitors li h3 {
@@ -88,6 +90,8 @@ img {
 
 .visitors li img {
   grid-area: image;
+  border-radius: 999px;
+  border: 1px solid rgb(241, 222, 144);
 }
 
 .visitors li .description {
@@ -98,7 +102,7 @@ img {
   margin-top: 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 920px) {
   #site-header {
     font-size: 80%;
   }
