@@ -10,6 +10,9 @@ body {
   background-color: #f8f8f8;
   max-width: 1024px;
   margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -21,17 +24,50 @@ h6 {
   margin-top: 0;
 }
 
+a,
+a:link,
+a:visited,
+a:active {
+  color: #222;
+}
+
+#global-nav a,
+#global-nav a:link,
+#global-nav a:active,
+#global-nav a:visited {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color .2s;
+}
+
+#global-nav a:hover {
+  border-bottom-color: #222;
+}
+
 main {
   background-color: white;
+  flex-grow: 1;
 }
 
 /* --- Site header --- */
 #site-header {
   background-color: rgb(227, 249, 227);
+  border-bottom: 2px solid rgb(202, 231, 202);
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr;
   padding: 20px;
+}
+
+#site-header label {
+  margin-right: 20px;
+  display: flex;
+  display: none;
+}
+
+#site-header label img {
+  width: 32px;
+  height: 32px;
 }
 
 #site-header h1 {
@@ -53,6 +89,10 @@ main {
   padding: 0 10px;
 }
 
+#menu-checkbox {
+  display: none;
+}
+
 /* --- Main content --- */
 main {
   padding: 20px;
@@ -60,6 +100,23 @@ main {
 
 img {
   max-width: 100%;
+}
+
+/* --- Local navigation --- */
+#local-nav {
+  background-color: rgb(227, 249, 227);
+  border: 1px solid rgb(202, 231, 202);
+  padding: 10px;
+  margin-right: 10px;
+  float: left;
+}
+
+#local-nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 /* --- Lists of visitors --- */
@@ -79,8 +136,8 @@ img {
 
   margin-top: 20px;
   padding: 20px;
-  background-color: rgb(251, 246, 226);
-  border: 1px solid rgb(241, 222, 144);
+  /* background-color: rgb(251, 246, 226);
+  border: 1px solid rgb(241, 222, 144); */
 }
 
 .visitors li h3 {
@@ -103,11 +160,33 @@ img {
 }
 
 @media screen and (max-width: 920px) {
-  #site-header {
-    font-size: 80%;
+  html {
+    font-size: 16px;
   }
 
   #global-nav li {
     padding: 0 4px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #site-header label {
+    display: block;
+  }
+
+  #site-header nav {
+    display: none;
+    justify-self: stretch;
+
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+
+  #menu-checkbox:checked~nav {
+    display: block;
+  }
+
+  #global-nav li {
+    display: block;
   }
 }
