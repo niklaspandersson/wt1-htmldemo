@@ -31,6 +31,14 @@ a:active {
   color: #222;
 }
 
+section {
+  margin-bottom: 1rem;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
 #global-nav a,
 #global-nav a:link,
 #global-nav a:active,
@@ -157,6 +165,30 @@ img {
 
 .visitors li .description p:first-child {
   margin-top: 0;
+}
+
+/* --- Formulär -- */
+fieldset {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px;
+}
+
+fieldset .actions {
+  grid-column: 1 / 3;
+  text-align: center;
+}
+
+button {
+  background-color: green;
+  color: white;
+  border: 2px solid rgb(79, 171, 79);
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
+button:hover {
+  background-color: rgb(78, 143, 78);
 }
 
 @media screen and (max-width: 920px) {
