@@ -1,5 +1,3 @@
-@import url("index.css");
-
 html {
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -108,6 +106,18 @@ main {
 
 img {
   max-width: 100%;
+}
+
+/* --- splash --- */
+#splash {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left -80px;
+  padding: 70px;
+  padding-bottom: 150px;
+  padding-bottom: 150px;
+  color: white;
+  font-size: 150%;
 }
 
 /* --- Local navigation --- */
