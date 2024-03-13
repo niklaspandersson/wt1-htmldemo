@@ -110,15 +110,16 @@ img {
 
 /* --- splash --- */
 #splash {
+  display: flex;
+  flex-direction: column;
   position: relative;
   margin: 0;
-  line-height: 0;
 }
 
 #splash video {
   max-width: 100%;
   display: block;
-  height: 60vh;
+  height: 70vh;
   object-fit: cover;
   object-position: center;
 }
@@ -133,7 +134,6 @@ img {
   color: white;
   font-size: 300%;
   font-weight: bold;
-  line-height: initial;
 }
 
 /* --- columns --- */
@@ -243,6 +243,10 @@ button:hover {
 }
 
 @media screen and (max-width: 700px) {
+  #first-page-interactions {
+    display: block;
+  }
+
   #site-header label {
     display: block;
   }
