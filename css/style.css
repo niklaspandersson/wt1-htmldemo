@@ -136,6 +136,21 @@ img {
   line-height: initial;
 }
 
+/* --- columns --- */
+#first-page-interactions {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 30px;
+}
+
+#first-page-interactions .weather {
+  order: 2;
+}
+
+#first-page-interactions .observation {
+  order: 1;
+}
+
 /* --- Local navigation --- */
 #local-nav {
   background-color: rgb(227, 249, 227);

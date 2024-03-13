@@ -31,20 +31,29 @@
     <section>
       <b>Lorem ipsum</b> dolor sit, amet consectetur adipisicing elit. Qui hic inventore dolorum provident culpa ipsa voluptate suscipit molestias. Accusamus laboriosam dolores molestiae vitae, officiis obcaecati repudiandae? Dolor ipsam quibusdam voluptatibus.
     </section>
-    <section>
-      <h2>Registrera observation</h2>
-      <form name="Observationer" method="POST" data-netlify="true">
-        <fieldset>
-          <legend>Registrera observation</legend>
-          <label for="">Art</label>
-          <input type="text" name="art" placeholder="En okänd art">
-          <label for="">Beskrivning</label><textarea name="beskrivning" cols="30" rows="10"></textarea>
-          <div class="actions">
-            <button type="submit">Skicka</button>
-            <button type="reset">Börja om</button>
-          </div>
-        </fieldset>
-      </form>
+    <section id="first-page-interactions">
+      <div class="column weather">
+        <h2>Vädret</h2>
+        <a class="weatherwidget-io" href="https://forecast7.com/sv/56d8814d81/vaxjo/" data-days="3" data-theme="clear">Växjö, Sweden</a>
+        <script>
+          !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+        </script>
+      </div>
+      <div class="column observation">
+        <h2>Registrera observation</h2>
+        <form name="Observationer" method="POST" data-netlify="true">
+          <fieldset>
+            <legend>Registrera observation</legend>
+            <label for="">Art</label>
+            <input type="text" name="art" placeholder="En okänd art">
+            <label for="">Beskrivning</label><textarea name="beskrivning" cols="30" rows="10"></textarea>
+            <div class="actions">
+              <button type="submit">Skicka</button>
+              <button type="reset">Börja om</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </section>
   </main>
 </body>
