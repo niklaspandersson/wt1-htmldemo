@@ -110,14 +110,30 @@ img {
 
 /* --- splash --- */
 #splash {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left -80px;
-  padding: 70px;
-  padding-bottom: 150px;
-  padding-bottom: 150px;
+  position: relative;
+  margin: 0;
+  line-height: 0;
+}
+
+#splash video {
+  max-width: 100%;
+  display: block;
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+#splash .overlay {
+  position: absolute;
+  background: linear-gradient(transparent, rgba(0, 0, 0, .5));
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em 1em;
   color: white;
-  font-size: 150%;
+  font-size: 300%;
+  font-weight: bold;
+  line-height: initial;
 }
 
 /* --- Local navigation --- */
